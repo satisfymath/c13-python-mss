@@ -77,7 +77,7 @@ class Monitor:
             Prior to this version, a Region and a Monitor were effectively
             the same: a dict with left, top, width, and height entries.
         """
-        return Region(left=self.left, top=self.top, width=self.width, height=self.height)
+        return Region(left=self["left"], top=self["top"], width=self["width"], height=self["height"])
 
     @overload
     def __getitem__(self, key: Literal["left", "top", "width", "height"], /) -> int: ...
